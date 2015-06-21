@@ -1,0 +1,40 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="moduloadministrador.aspx.cs" Inherits="moduloadministrador" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center">
+    
+        MODULO ADMINISTRADOR</div>
+    <p>
+        Bienvenido a su panel de control.</p>
+    <p>
+        <asp:Button ID="Button6" runat="server" 
+            Text="Carga Masiva" />
+    </p>
+    <p class="style1">
+        <strong>Gestión de Cobros</strong></p>
+    <p>
+        <asp:Button ID="Button3" runat="server" 
+            Text="Agregar cobro" />
+    </p>
+    <p>
+        <asp:Button ID="Button4" runat="server" Text="Modificar Cobro" />
+    </p>
+    <p>
+        <asp:Button ID="Button5" runat="server" Text="Inhabilitar Cobro" />
+    </p>
+    </form>
+</body>
+</html>
