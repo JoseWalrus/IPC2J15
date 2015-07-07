@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://quetzalexpress.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://quetzalexpress.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://quetzalexpress.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcod_cliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="getcod_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getcod_clienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcodpedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="total" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcodpedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getcodpedidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getloteactual">
+        <s:complexType />
+      </s:element>
+      <s:element name="getloteactualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getloteactualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getarticulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getarticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getarticuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getprecio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getprecioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getprecioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcasilla_cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="casilla" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcasilla_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getcasilla_clienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_pedidos_cliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="cargar_pedidos_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_pedidos_clienteResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_empleado_departamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_empleado_departamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_empleado_departamentoResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fecharecibido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fecharecibidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_paquete_cliente_fecharecibidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaentransito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaentransitoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_paquete_cliente_fechaentransitoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaenbodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaenbodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_paquete_cliente_fechaenbodegaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaentregado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_paquete_cliente_fechaentregadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_paquete_cliente_fechaentregadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_casilla_cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dpi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_casilla_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscar_casilla_clienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_imagen_por_codigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_imagen_por_codigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscar_imagen_por_codigoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_codigo_cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="casilla" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_codigo_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscar_codigo_clienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_precio_parcial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_precio_parcialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscar_precio_parcialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_codigo_impuesto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscar_codigo_impuestoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscar_codigo_impuestoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_pedidos_empleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="casilla" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_pedidos_empleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_pedidos_empleadoResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_cliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="cargar_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_clienteResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cargar_tarjeta">
+        <s:complexType />
+      </s:element>
+      <s:element name="cargar_tarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cargar_tarjetaResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logincliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginclienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginclienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Loginempleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginempleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginempleadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_estado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_estadoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="update_precio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="precio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_precioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="update_imagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="precio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_imagenResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="update_lote">
+        <s:complexType />
+      </s:element>
+      <s:element name="update_loteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="update_lote_pedidos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lote" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_lote_pedidosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="add_imagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ubicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_p" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_imagenResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="add_impuesto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcentaje" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_impuestoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="add_empleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sueldo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departamento" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_empleadoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="add_pedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cod_cliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cod_impuesto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="peso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_pedidoResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcod_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:getcod_cliente" />
+  </wsdl:message>
+  <wsdl:message name="getcod_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:getcod_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcodpedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:getcodpedido" />
+  </wsdl:message>
+  <wsdl:message name="getcodpedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:getcodpedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getloteactualSoapIn">
+    <wsdl:part name="parameters" element="tns:getloteactual" />
+  </wsdl:message>
+  <wsdl:message name="getloteactualSoapOut">
+    <wsdl:part name="parameters" element="tns:getloteactualResponse" />
+  </wsdl:message>
+  <wsdl:message name="getarticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:getarticulo" />
+  </wsdl:message>
+  <wsdl:message name="getarticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:getarticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="getprecioSoapIn">
+    <wsdl:part name="parameters" element="tns:getprecio" />
+  </wsdl:message>
+  <wsdl:message name="getprecioSoapOut">
+    <wsdl:part name="parameters" element="tns:getprecioResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcasilla_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:getcasilla_cliente" />
+  </wsdl:message>
+  <wsdl:message name="getcasilla_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:getcasilla_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_pedidos_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_pedidos_cliente" />
+  </wsdl:message>
+  <wsdl:message name="cargar_pedidos_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_pedidos_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_empleado_departamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_empleado_departamento" />
+  </wsdl:message>
+  <wsdl:message name="cargar_empleado_departamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_empleado_departamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fecharecibidoSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fecharecibido" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fecharecibidoSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fecharecibidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaentransitoSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaentransito" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaentransitoSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaentransitoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaenbodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaenbodega" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaenbodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaenbodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaentregadoSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaentregado" />
+  </wsdl:message>
+  <wsdl:message name="cargar_paquete_cliente_fechaentregadoSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_paquete_cliente_fechaentregadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscar_casilla_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:buscar_casilla_cliente" />
+  </wsdl:message>
+  <wsdl:message name="buscar_casilla_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:buscar_casilla_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscar_imagen_por_codigoSoapIn">
+    <wsdl:part name="parameters" element="tns:buscar_imagen_por_codigo" />
+  </wsdl:message>
+  <wsdl:message name="buscar_imagen_por_codigoSoapOut">
+    <wsdl:part name="parameters" element="tns:buscar_imagen_por_codigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscar_codigo_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:buscar_codigo_cliente" />
+  </wsdl:message>
+  <wsdl:message name="buscar_codigo_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:buscar_codigo_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscar_precio_parcialSoapIn">
+    <wsdl:part name="parameters" element="tns:buscar_precio_parcial" />
+  </wsdl:message>
+  <wsdl:message name="buscar_precio_parcialSoapOut">
+    <wsdl:part name="parameters" element="tns:buscar_precio_parcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscar_codigo_impuestoSoapIn">
+    <wsdl:part name="parameters" element="tns:buscar_codigo_impuesto" />
+  </wsdl:message>
+  <wsdl:message name="buscar_codigo_impuestoSoapOut">
+    <wsdl:part name="parameters" element="tns:buscar_codigo_impuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_pedidos_empleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_pedidos_empleado" />
+  </wsdl:message>
+  <wsdl:message name="cargar_pedidos_empleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_pedidos_empleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_cliente" />
+  </wsdl:message>
+  <wsdl:message name="cargar_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="cargar_tarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:cargar_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="cargar_tarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:cargar_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginclienteSoapIn">
+    <wsdl:part name="parameters" element="tns:Logincliente" />
+  </wsdl:message>
+  <wsdl:message name="LoginclienteSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginclienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginempleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Loginempleado" />
+  </wsdl:message>
+  <wsdl:message name="LoginempleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginempleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_estadoSoapIn">
+    <wsdl:part name="parameters" element="tns:update_estado" />
+  </wsdl:message>
+  <wsdl:message name="update_estadoSoapOut">
+    <wsdl:part name="parameters" element="tns:update_estadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_precioSoapIn">
+    <wsdl:part name="parameters" element="tns:update_precio" />
+  </wsdl:message>
+  <wsdl:message name="update_precioSoapOut">
+    <wsdl:part name="parameters" element="tns:update_precioResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_imagenSoapIn">
+    <wsdl:part name="parameters" element="tns:update_imagen" />
+  </wsdl:message>
+  <wsdl:message name="update_imagenSoapOut">
+    <wsdl:part name="parameters" element="tns:update_imagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_loteSoapIn">
+    <wsdl:part name="parameters" element="tns:update_lote" />
+  </wsdl:message>
+  <wsdl:message name="update_loteSoapOut">
+    <wsdl:part name="parameters" element="tns:update_loteResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_lote_pedidosSoapIn">
+    <wsdl:part name="parameters" element="tns:update_lote_pedidos" />
+  </wsdl:message>
+  <wsdl:message name="update_lote_pedidosSoapOut">
+    <wsdl:part name="parameters" element="tns:update_lote_pedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_imagenSoapIn">
+    <wsdl:part name="parameters" element="tns:add_imagen" />
+  </wsdl:message>
+  <wsdl:message name="add_imagenSoapOut">
+    <wsdl:part name="parameters" element="tns:add_imagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_impuestoSoapIn">
+    <wsdl:part name="parameters" element="tns:add_impuesto" />
+  </wsdl:message>
+  <wsdl:message name="add_impuestoSoapOut">
+    <wsdl:part name="parameters" element="tns:add_impuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_empleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:add_empleado" />
+  </wsdl:message>
+  <wsdl:message name="add_empleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:add_empleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_pedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:add_pedido" />
+  </wsdl:message>
+  <wsdl:message name="add_pedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:add_pedidoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcod_cliente">
+      <wsdl:input message="tns:getcod_clienteSoapIn" />
+      <wsdl:output message="tns:getcod_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcodpedido">
+      <wsdl:input message="tns:getcodpedidoSoapIn" />
+      <wsdl:output message="tns:getcodpedidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getloteactual">
+      <wsdl:input message="tns:getloteactualSoapIn" />
+      <wsdl:output message="tns:getloteactualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getarticulo">
+      <wsdl:input message="tns:getarticuloSoapIn" />
+      <wsdl:output message="tns:getarticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getprecio">
+      <wsdl:input message="tns:getprecioSoapIn" />
+      <wsdl:output message="tns:getprecioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcasilla_cliente">
+      <wsdl:input message="tns:getcasilla_clienteSoapIn" />
+      <wsdl:output message="tns:getcasilla_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_cliente">
+      <wsdl:input message="tns:cargar_pedidos_clienteSoapIn" />
+      <wsdl:output message="tns:cargar_pedidos_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_empleado_departamento">
+      <wsdl:input message="tns:cargar_empleado_departamentoSoapIn" />
+      <wsdl:output message="tns:cargar_empleado_departamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fecharecibido">
+      <wsdl:input message="tns:cargar_paquete_cliente_fecharecibidoSoapIn" />
+      <wsdl:output message="tns:cargar_paquete_cliente_fecharecibidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentransito">
+      <wsdl:input message="tns:cargar_paquete_cliente_fechaentransitoSoapIn" />
+      <wsdl:output message="tns:cargar_paquete_cliente_fechaentransitoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaenbodega">
+      <wsdl:input message="tns:cargar_paquete_cliente_fechaenbodegaSoapIn" />
+      <wsdl:output message="tns:cargar_paquete_cliente_fechaenbodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentregado">
+      <wsdl:input message="tns:cargar_paquete_cliente_fechaentregadoSoapIn" />
+      <wsdl:output message="tns:cargar_paquete_cliente_fechaentregadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar_casilla_cliente">
+      <wsdl:input message="tns:buscar_casilla_clienteSoapIn" />
+      <wsdl:output message="tns:buscar_casilla_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar_imagen_por_codigo">
+      <wsdl:input message="tns:buscar_imagen_por_codigoSoapIn" />
+      <wsdl:output message="tns:buscar_imagen_por_codigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_cliente">
+      <wsdl:input message="tns:buscar_codigo_clienteSoapIn" />
+      <wsdl:output message="tns:buscar_codigo_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar_precio_parcial">
+      <wsdl:input message="tns:buscar_precio_parcialSoapIn" />
+      <wsdl:output message="tns:buscar_precio_parcialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_impuesto">
+      <wsdl:input message="tns:buscar_codigo_impuestoSoapIn" />
+      <wsdl:output message="tns:buscar_codigo_impuestoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_empleado">
+      <wsdl:input message="tns:cargar_pedidos_empleadoSoapIn" />
+      <wsdl:output message="tns:cargar_pedidos_empleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_cliente">
+      <wsdl:input message="tns:cargar_clienteSoapIn" />
+      <wsdl:output message="tns:cargar_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cargar_tarjeta">
+      <wsdl:input message="tns:cargar_tarjetaSoapIn" />
+      <wsdl:output message="tns:cargar_tarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logincliente">
+      <wsdl:input message="tns:LoginclienteSoapIn" />
+      <wsdl:output message="tns:LoginclienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Loginempleado">
+      <wsdl:input message="tns:LoginempleadoSoapIn" />
+      <wsdl:output message="tns:LoginempleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_estado">
+      <wsdl:input message="tns:update_estadoSoapIn" />
+      <wsdl:output message="tns:update_estadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_precio">
+      <wsdl:input message="tns:update_precioSoapIn" />
+      <wsdl:output message="tns:update_precioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_imagen">
+      <wsdl:input message="tns:update_imagenSoapIn" />
+      <wsdl:output message="tns:update_imagenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_lote">
+      <wsdl:input message="tns:update_loteSoapIn" />
+      <wsdl:output message="tns:update_loteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_lote_pedidos">
+      <wsdl:input message="tns:update_lote_pedidosSoapIn" />
+      <wsdl:output message="tns:update_lote_pedidosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_imagen">
+      <wsdl:input message="tns:add_imagenSoapIn" />
+      <wsdl:output message="tns:add_imagenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_impuesto">
+      <wsdl:input message="tns:add_impuestoSoapIn" />
+      <wsdl:output message="tns:add_impuestoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_empleado">
+      <wsdl:input message="tns:add_empleadoSoapIn" />
+      <wsdl:output message="tns:add_empleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_pedido">
+      <wsdl:input message="tns:add_pedidoSoapIn" />
+      <wsdl:output message="tns:add_pedidoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://quetzalexpress.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcod_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/getcod_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcodpedido">
+      <soap:operation soapAction="http://quetzalexpress.org/getcodpedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getloteactual">
+      <soap:operation soapAction="http://quetzalexpress.org/getloteactual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getarticulo">
+      <soap:operation soapAction="http://quetzalexpress.org/getarticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getprecio">
+      <soap:operation soapAction="http://quetzalexpress.org/getprecio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcasilla_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/getcasilla_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_pedidos_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_empleado_departamento">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_empleado_departamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fecharecibido">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fecharecibido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentransito">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaentransito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaenbodega">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaenbodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentregado">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaentregado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_casilla_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/buscar_casilla_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_imagen_por_codigo">
+      <soap:operation soapAction="http://quetzalexpress.org/buscar_imagen_por_codigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/buscar_codigo_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_precio_parcial">
+      <soap:operation soapAction="http://quetzalexpress.org/buscar_precio_parcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_impuesto">
+      <soap:operation soapAction="http://quetzalexpress.org/buscar_codigo_impuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_empleado">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_pedidos_empleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_cliente">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_tarjeta">
+      <soap:operation soapAction="http://quetzalexpress.org/cargar_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logincliente">
+      <soap:operation soapAction="http://quetzalexpress.org/Logincliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loginempleado">
+      <soap:operation soapAction="http://quetzalexpress.org/Loginempleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_estado">
+      <soap:operation soapAction="http://quetzalexpress.org/update_estado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_precio">
+      <soap:operation soapAction="http://quetzalexpress.org/update_precio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_imagen">
+      <soap:operation soapAction="http://quetzalexpress.org/update_imagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_lote">
+      <soap:operation soapAction="http://quetzalexpress.org/update_lote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_lote_pedidos">
+      <soap:operation soapAction="http://quetzalexpress.org/update_lote_pedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_imagen">
+      <soap:operation soapAction="http://quetzalexpress.org/add_imagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_impuesto">
+      <soap:operation soapAction="http://quetzalexpress.org/add_impuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_empleado">
+      <soap:operation soapAction="http://quetzalexpress.org/add_empleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_pedido">
+      <soap:operation soapAction="http://quetzalexpress.org/add_pedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://quetzalexpress.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcod_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/getcod_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcodpedido">
+      <soap12:operation soapAction="http://quetzalexpress.org/getcodpedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getloteactual">
+      <soap12:operation soapAction="http://quetzalexpress.org/getloteactual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getarticulo">
+      <soap12:operation soapAction="http://quetzalexpress.org/getarticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getprecio">
+      <soap12:operation soapAction="http://quetzalexpress.org/getprecio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcasilla_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/getcasilla_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_pedidos_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_empleado_departamento">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_empleado_departamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fecharecibido">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fecharecibido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentransito">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaentransito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaenbodega">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaenbodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_paquete_cliente_fechaentregado">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_paquete_cliente_fechaentregado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_casilla_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/buscar_casilla_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_imagen_por_codigo">
+      <soap12:operation soapAction="http://quetzalexpress.org/buscar_imagen_por_codigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/buscar_codigo_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_precio_parcial">
+      <soap12:operation soapAction="http://quetzalexpress.org/buscar_precio_parcial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar_codigo_impuesto">
+      <soap12:operation soapAction="http://quetzalexpress.org/buscar_codigo_impuesto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_pedidos_empleado">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_pedidos_empleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_cliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargar_tarjeta">
+      <soap12:operation soapAction="http://quetzalexpress.org/cargar_tarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logincliente">
+      <soap12:operation soapAction="http://quetzalexpress.org/Logincliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loginempleado">
+      <soap12:operation soapAction="http://quetzalexpress.org/Loginempleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_estado">
+      <soap12:operation soapAction="http://quetzalexpress.org/update_estado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_precio">
+      <soap12:operation soapAction="http://quetzalexpress.org/update_precio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_imagen">
+      <soap12:operation soapAction="http://quetzalexpress.org/update_imagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_lote">
+      <soap12:operation soapAction="http://quetzalexpress.org/update_lote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_lote_pedidos">
+      <soap12:operation soapAction="http://quetzalexpress.org/update_lote_pedidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_imagen">
+      <soap12:operation soapAction="http://quetzalexpress.org/add_imagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_impuesto">
+      <soap12:operation soapAction="http://quetzalexpress.org/add_impuesto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_empleado">
+      <soap12:operation soapAction="http://quetzalexpress.org/add_empleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_pedido">
+      <soap12:operation soapAction="http://quetzalexpress.org/add_pedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:25850/QuetzalExpress/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:25850/QuetzalExpress/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
